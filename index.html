@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: black;
+            border-radius: 25px;
+            
+        }
+        h1{
+            text-transform: capitalize;
+            padding: 25px;
+            background-color: rgb(102, 102, 102);
+            color: black;
+            text-shadow: 2px 2px 50px rgb(186, 149, 255);
+        }
+        input{
+            font-size: 50px;
+            padding: 5px;
+            text-align: right;
+            margin-bottom: 15px;
+            height: 40px;
+            border-radius: 25px;
+            color: rgb(255, 255, 255);
+            width: 330px;
+            border: 1px solid black;
+            
+            
+
+        }
+        .button{
+            height: 60px;
+            width: 80px;
+            text-align: center;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            border: 1px solid black;
+            border-radius: 100px;
+            font-weight: 100px;
+            padding: 5px;
+            margin: 4px;
+        }
+        .button:hover{
+            border: 1px solid lightskyblue;
+        }
+        .zero:hover{
+            border: 1px solid lightskyblue;
+        }
+        
+        .zero{
+            height: 60px;
+            width: 178px;
+            text-align: center;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            border-radius: 60px;
+            border: 1px solid black;
+
+        }
+        .container{
+            position: relative;
+            top: 100px;
+            left: 500px;
+            border: 0.1px solid rgb(186, 149, 255);
+            border-radius: 25px;
+            width: fit-content;
+            box-shadow: 2px 2px 50px  rgb(186, 149, 255);
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .ac{
+            height: 60px;
+            width: 80px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 100px;
+            font-weight: 100px;
+            padding: 5px;
+            margin: 4px;
+        }
+        .ac:hover{
+            border: 1px solid lightskyblue;
+        }
+        .percent{
+            height: 60px;
+            width: 80px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 100px;
+            font-weight: 100px;
+            padding: 5px;
+            margin: 4px;
+        }
+        .percent:hover{
+            border: 1px solid lightskyblue;
+        }
+        .divide{
+            height: 60px;
+            width: 80px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 100px;
+            font-weight: 100px;
+            padding: 5px;
+            margin: 4px;
+        }
+        .divide:hover{
+            border: 1px solid lightskyblue;
+        }
+
+        
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <hr>
+    <div class="container">
+        <form name="calcy">
+            <input type="text" class="display" name="display"><br>
+            <input type="button" class="ac" value="ac" style="background-color: rgb(212, 212, 210);"  onclick="calcy.display.value=' ' ">
+            <input type="button" class="percent" value="%"  style="background-color: rgb(212, 212, 210);"  onclick="calcy.display.value+='%'">
+            <input type="button" class="divide" value="&#247" style="background-color: rgb(212, 212, 210);"  onclick="calcy.display.value+='/'">
+            <input type="button" class="button" value="<-"   style="background-color:rgb(255, 149, 0);"onclick="calcy.display.value=calcy.display.value.slice(0,-1)"><br>
+           
+            <input type="button" class="button" value="7"  style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='7'">
+            <input type="button" class="button" value="8"  style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='8'">
+            <input type="button" class="button" value="9"  style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='9'">
+            <input type="button" class="button" value="&times;" style="background-color:rgb(255, 149, 0);"  onclick="calcy.display.value+='*'"><br>
+
+            <input type="button" class="button" value="4" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='4'">
+            <input type="button" class="button" value="5" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='5'">
+            <input type="button" class="button" value="6" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='6'">
+            <input type="button" class="button" value="-" style="background-color:rgb(255, 149, 0);" onclick="calcy.display.value+='-'"><br>
+           
+            <input type="button" class="button" value="1" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='1'">
+            <input type="button" class="button" value="2" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='2'">
+            <input type="button" class="button" value="3" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='3'">
+            <input type="button" class="button" value="+" style="background-color:rgb(255, 149, 0);"  onclick="calcy.display.value+='+'"><br>
+           
+            <input type="button" class="zero" value="0" style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='0'">
+            <input type="button" class="button" value="." style="background-color: rgb(80, 80, 80);" onclick="calcy.display.value+='.'">
+            <input type="button" class="button" value="=" style="background-color:rgb(255, 149, 0);"  onclick="calcy.display.value=eval(calcy.display.value)">
+        </form>
+    </div>
+</body>
+</html>
